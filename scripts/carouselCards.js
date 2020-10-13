@@ -1,9 +1,8 @@
 // carousel //
-const slides = document.querySelector(".slider-items").children;
+const slides = document.querySelector(".slider-items2").children;
 const nextSlide = document.querySelector(".right-slide");
 const prevSlide = document.querySelector(".left-slide");
 const totalSlides = slides.length;
-// console.log("total slides", totalSlides);
 let index = 0;
 
 function changeActive() {

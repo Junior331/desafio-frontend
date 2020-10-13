@@ -35,7 +35,54 @@ function fetchBanner() {
       console.log(erro);
     });
 }
+
 fetchBanner();
+
+function renderCards(cards) {
+  return cards
+    .map(
+      (card) => `
+  <div class="card">
+    <img src="${card.capa}" alt="" />
+    <div class="container-description">
+      <div>
+        <h3 class="sub-title">${card.tipo}</h3>
+        <p class="text"><b>Bairro:</b> ${card.bairro}</p>
+        <p class="text">
+          <b>Cidade:</b> ${card.cidade}- <b>Estado:</b> ${card.UF}
+        </p>
+      </div>
+      <div class="container-icons">
+        <div class="item">
+          <img src="../assets/img/cama.svg" />
+          <p class="text">${card.quartos}</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/carro.svg" />
+          <p class="text">${card.vagas}</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/metragem.svg" />
+          <p class="text">${card.metragem}m</p>
+        </div>
+      </div>
+      <a href="${card.link}" class="listing__btn">Veja mais</a>
+    </div>
+  </div>`
+    )
+    .join("");
+}
+function renderCardGroups(groups) {
+  return groups
+    .map((cardGroup) => {
+      return `
+      <div class="slider-cards">
+      ${renderCards(cardGroup)}
+      </div>
+      `;
+    })
+    .join("");
+}
 function fetchVitrine() {
   fetch(`${url}/vitrines.json`)
     .then((response) => {
@@ -45,40 +92,21 @@ function fetchVitrine() {
       return response.json();
     })
     .then((data) => {
-      const html = data
-        .map((card) => {
-          return `
-              <div class="card">
-              <img src="${card.capa}" alt="" />
-            
-              <div class="container-description">
-              <div>
-              <h3 class="sub-title">${card.tipo}</h3>
-              <p class="text"><b>Bairro:</b> ${card.bairro}</p>
-              <p class="text"><b>Cidade:</b> ${card.cidade}- <b>Estado:</b> ${card.UF}</p>
-              </div>
-                <div class="container-icons">
-                  <div class="item">
-       <img src="../assets/img/cama.svg" />
-                     <p class="text">${card.quartos}</p> 
-                  </div>
-                  <div class="item">
-            <img src="../assets/img/carro.svg" />
-                     <p class="text">${card.vagas}</p> 
-                  </div>
-                  <div class="item">
-                  <img src="../assets/img/metragem.svg" />
-                     <p class="text">${card.metragem}m</p> 
-                  </div>
-                  </div>
-                  <a href="${card.link}" class="listing__btn">Veja mais</a>
-              </div>
-            </div>
-            `;
-        })
-        .join("");
-      //'afterbegin' = Dentro do elemento, antes de seu primeiro filho (childNode)
-      document.querySelector("#imoveis").insertAdjacentHTML("afterbegin", html);
+      const groupsItem = 3;
+      const groupsQuantity = Math.ceil(data.length / groupsItem);
+      console.log("groups", groupsQuantity);
+      const groups = Array(groupsQuantity)
+        .fill(null)
+        .map(() => new Array());
+      data.forEach((element, index) => {
+        const groupPosition = Math.floor(index / groupsItem);
+        groups[groupPosition].push(element);
+      });
+      const html = renderCardGroups(groups);
+      console.log("adsd", groups);
+
+      document.querySelector("#last-news").innerHTML = html;
+      document.querySelectorAll(".slider-cards")[0].classList.add("active");
     })
     .catch((erro) => {
       console.log(erro);
@@ -95,9 +123,8 @@ function fetchNoticias() {
       return response.json();
     })
     .then((data) => {
-      const html = data
-        .map((Noticia) => {
-          return `
+      const html = data.map((Noticia) => {
+        return `
               <div class="card">
                 <img src="${Noticia.capa}" alt="" />
               
@@ -114,9 +141,7 @@ function fetchNoticias() {
                 </div>
               </div>
             `;
-        })
-        .join("");
-      //'afterbegin' = Dentro do elemento, antes de seu primeiro filho (childNode)
+      });
       document
         .querySelector("#noticias")
         .insertAdjacentHTML("afterbegin", html);
