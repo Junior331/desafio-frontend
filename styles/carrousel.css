@@ -1,6 +1,7 @@
 /* Carrossel  */
 .slider {
   width: 100%;
+  text-align: center;
   position: relative;
 }
 .slider .left-slide,
@@ -34,6 +35,9 @@
 .left-slide img {
   width: 40%;
 }
+#last-news {
+  min-height: 600px;
+}
 .slider .slider-items {
   /* opacity: 0; */
   width: 100%;
@@ -41,6 +45,7 @@
   /* display: none; */
   position: relative;
 }
+
 .slider .slider-items .item {
   opacity: 0;
   width: 100%;
@@ -48,9 +53,11 @@
   position: absolute;
   transition: opacity 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
+
 .slider .slider-items .item.active {
   opacity: 1;
 }
+
 .slider .slider-items .item img {
   width: 100%;
   height: 100%;
