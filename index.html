@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;1,100;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo_footer.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header&footer.css" />
+    <link rel="stylesheet" href="./styles/carrousel.css" />
+    <link rel="stylesheet" href="./styles/cards.css" />
+    <link rel="stylesheet" href="./styles/most-accesseds.css" />
+    <title>Inforce</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Header -->
+      <header id="header">
+        <a class="logo" href="#">
+          <img src="./assets/img/logo_topo.png" alt="Logo" />
+        </a>
+        <nav id="navigation" class="menu-desktop">
+          <ul class="container-links">
+            <li><a class="link" href="#">Home</a></li>
+            <li>
+              <a class="link" href="#">Imóveis</a>
+            </li>
+            <li>
+              <a class="link" href="#">Serviços</a>
+            </li>
+            <li>
+              <a class="link" href="#">Fale Conosco</a>
+            </li>
+          </ul>
+        </nav>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="icon-menu-check">
+          <img class="menu-icon" src="./assets/img/menu.svg" alt="" />
+        </label>
+
+        <nav class="menu-mobile">
+          <ul class="menu" id="menu">
+            <li class="btn-menu btn-menu-close">
+              <label for="check">
+                <img
+                  class="menu-icon"
+                  src="./assets/img/menu-branco.svg"
+                  alt=""
+                />
+              </label>
+            </li>
+            <li class="menu-item">
+              <a class="menu-item-action" href="#">Home</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-item-action" href="#">Imóveis</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-item-action" href="#">Serviços</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-item-action" href="#">Fale Conosco</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Header final -->
+
+      <!-- Banner -->
+      <section class="slider">
+        <div class="slider-items">
+          <!-- slider controls -->
+          <div class="left-slide">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQ5MiA0OTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTE5OC42MDgsMjQ2LjEwNEwzODIuNjY0LDYyLjA0YzUuMDY4LTUuMDU2LDcuODU2LTExLjgxNiw3Ljg1Ni0xOS4wMjRjMC03LjIxMi0yLjc4OC0xMy45NjgtNy44NTYtMTkuMDMybC0xNi4xMjgtMTYuMTIgICAgQzM2MS40NzYsMi43OTIsMzU0LjcxMiwwLDM0Ny41MDQsMHMtMTMuOTY0LDIuNzkyLTE5LjAyOCw3Ljg2NEwxMDkuMzI4LDIyNy4wMDhjLTUuMDg0LDUuMDgtNy44NjgsMTEuODY4LTcuODQ4LDE5LjA4NCAgICBjLTAuMDIsNy4yNDgsMi43NiwxNC4wMjgsNy44NDgsMTkuMTEybDIxOC45NDQsMjE4LjkzMmM1LjA2NCw1LjA3MiwxMS44Miw3Ljg2NCwxOS4wMzIsNy44NjRjNy4yMDgsMCwxMy45NjQtMi43OTIsMTkuMDMyLTcuODY0ICAgIGwxNi4xMjQtMTYuMTJjMTAuNDkyLTEwLjQ5MiwxMC40OTItMjcuNTcyLDAtMzguMDZMMTk4LjYwOCwyNDYuMTA0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4="
+            />
+          </div>
+          <div class="right-slide">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDMwLjcyOSAzMC43MjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPHBhdGggZD0iTTI0LjgxMywxNS4zNjZMMTAuMTg1LDI5Ljk5N2MtMC40ODcsMC40ODctMS4xMjgsMC43MzEtMS43NjgsMC43MzFjLTAuNjQxLDAtMS4yNzktMC4yNDQtMS43NjktMC43MzEgICBjLTAuOTc3LTAuOTc4LTAuOTc3LTIuNTYxLDAtMy41MzZsMTEuMDk1LTExLjA5Nkw2LjY0OSw0LjI2OGMtMC45NzYtMC45NzctMC45NzYtMi41NiwwLTMuNTM2YzAuOTc3LTAuOTc3LDIuNTYtMC45NzYsMy41MzYsMCAgIEwyNC44MTMsMTUuMzY2eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4="
+            />
+          </div>
+          <!-- slider controls -->
+        </div>
+      </section>
+      <!-- Banner final -->
+
+      <!-- Vitrine carrossel  -->
+      <section class="container">
+        <h2 class="titles">Vitrine de Imóveis</h2>
+        <div class="container-cards" id="imoveis"></div>
+      </section>
+      <!-- Vitrine carrossel final -->
+
+      <!-- Chamada -->
+      <section class="container-chamada">
+        <div class="container-button-banner">
+          <a class="btn effect01" href="#">
+            <span>Veja Mais</span>
+          </a>
+        </div>
+        <h2 class="paragrafo">
+          Suspendisse lorem felis, pretium in <br />
+          maximus id, tempor non ipsum
+        </h2>
+      </section>
+      <!-- Chamada final  -->
+
+      <!--noticias carrossel-->
+      <section class="container">
+        <h2 class="titles">Últimas noticias</h2>
+        <div class="container-cards" id="noticias"></div>
+      </section>
+      <!--noticias carrossel final -->
+
+      <!--Mais acessados -->
+      <section class="container">
+        <h2 class="titles">Mais Acessados</h2>
+        <div id="most-accessed"></div>
+      </section>
+      <!--Mais acessados final -->
+
+      <!-- Maps -->
+      <section class="container">
+        <div id="map"></div>
+      </section>
+      <!-- Maps final -->
+
+      <!-- Footer -->
+      <footer id="footer">
+        <a class="logo" href="#">
+          <img src="./assets/img/logo_footer.png" alt="Logo" />
+        </a>
+        <nav id="navigation">
+          <ul class="container-links">
+            <li><a class="link" href="#">Home</a></li>
+            <li>
+              <a class="link" href="#">Imóveis</a>
+            </li>
+            <li>
+              <a class="link" href="#">Serviços</a>
+            </li>
+            <li>
+              <a class="link" href="#">Fale Conosco</a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+      <!-- Footer final -->
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkQzob-oyC49Lz2AKOApITKVmEZOrWRLo&callback=initMap "
+      defer
+    ></script>
+    <script src="./scripts/fetchData.js"></script>
+    <script src="./scripts/map.js"></script>
+    <script src="./scripts/carousel.js"></script>
+  </body>
+</html>
